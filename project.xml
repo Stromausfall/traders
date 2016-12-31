@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project>
+
+<!-- example to run Traders: openfl test neko -->
+<!-- example to run the unit tests of Traders: openfl test neko -Dtesting -->
+<project>	
+	<meta title="Traders" package="net.matthiasauer.traders" version="0.0.1" company="Matthias Auer" />
 	
-	<meta title="Traders" package="com.sample.traders" version="1.0.0" company="Company Name" />
-	<app main="Main" path="Export" file="Traders" />
-	
+	<!-- general settings -->
 	<source path="Source" />
-	
-	<haxelib name="openfl" />
-	
+
 	<assets path="Assets" rename="assets" />
 	
+	<haxelib name="openfl" />
+
+	<!-- if the 'testing' define is not used -->
+	<app main="Main" path="Export" file="Traders" unless="testing"/>
+	
+	<!-- if the 'testing' define is used -->
+	<app main="TestMain" path="Export" file="Traders" if="testing"/>
+	<source path="Test" if="testing"/>
+	<haxelib name="mockatoo" if="testing"/>
+	<haxelib name="hamcrest" if="testing"/>
+	
 </project>
+ 
