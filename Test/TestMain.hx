@@ -14,5 +14,8 @@ class TestMain {
 		testRunner.add(new CoordinateTest());
 		
 		testRunner.run();
+		
+		// close
+		Sys.exit(0);
 	}
 }
