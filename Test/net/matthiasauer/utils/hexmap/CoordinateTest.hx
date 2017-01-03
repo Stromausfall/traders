@@ -28,7 +28,7 @@ class CoordinateTest extends TestCase
 		var expected:Coordinate = new Coordinate( -2, 7, -5);
 		
 		// WHEN:
-		var result:Coordinate = Coordinate.add(c1, c2);
+		var result:Coordinate = c1.add(c2);
 		
 		// THEN:
 		assertThat(result.x, equalTo(expected.x));
@@ -68,10 +68,10 @@ class CoordinateTest extends TestCase
 		var f3:Coordinate = new Coordinate(2, 2, -3);
 		
 		// WHEN:
-		var c1c2Equals = Coordinate.equals(c1, c2);
-		var c1f1Equals = Coordinate.equals(c1, f1);
-		var c1f2Equals = Coordinate.equals(c1, f2);
-		var c1f3Equals = Coordinate.equals(c1, f3);
+		var c1c2Equals = c1.equals(c2);
+		var c1f1Equals = c1.equals(f1);
+		var c1f2Equals = c1.equals(f2);
+		var c1f3Equals = c1.equals(f3);
 		
 		// THEN:
 		assertTrue(c1c2Equals);
@@ -99,7 +99,7 @@ class CoordinateTest extends TestCase
 			var neighborFound:Bool = false;
 			
 			for (expectedNeighbor in expectedNeighbors) {
-				if (Coordinate.equals(expectedNeighbor, returnedNeighbor)) {
+				if (expectedNeighbor.equals(returnedNeighbor)) {
 					neighborFound = true;
 				}
 			}

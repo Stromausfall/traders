@@ -29,14 +29,18 @@ class Coordinate
     }
 	
 	public function getNeighbors() : Array<Coordinate> {
-		return neighborOffset.map(function(offset) return Coordinate.add(this, offset));
+		return neighborOffset.map(function(offset) return this.add(offset));
 	}
 	
-	public function getDistance(lhs:Coordinate) : Int {
-		return Std.int((Math.abs(this.x - lhs.x) + Math.abs(this.y - lhs.y) + Math.abs(this.z + lhs.z)) / 2);
+	public function getDistance(rhs:Coordinate) : Int {
+		var lhs:Coordinate = this; 
+		
+		return Std.int((Math.abs(rhs.x - lhs.x) + Math.abs(rhs.y - lhs.y) + Math.abs(rhs.z + lhs.z)) / 2);
 	}
 	
-	public static function add(lhs:Coordinate, rhs:Coordinate) : Coordinate {
+	public function add(rhs:Coordinate) : Coordinate {
+		var lhs:Coordinate = this;
+		
 		var x:Int = lhs.x + rhs.x;
 		var y:Int = lhs.y + rhs.y;
 		var z:Int = lhs.z + rhs.z;
@@ -44,7 +48,9 @@ class Coordinate
 		return new Coordinate(x, y, z);
 	}
 	
-	public static function equals(lhs:Coordinate, rhs:Coordinate) : Bool {
+	public function equals(rhs:Coordinate) : Bool {
+		var lhs:Coordinate = this; 
+		
 		return (lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z);
 	}
 }
