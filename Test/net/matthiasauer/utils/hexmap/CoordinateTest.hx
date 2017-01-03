@@ -21,6 +21,42 @@ class CoordinateTest extends TestCase
 		assertTrue(true);
 	}
 	
+	public function testConstructorOffsetHorizontal() {
+		// GIVEN:
+		var expectedX:Int = 2;
+		var expectedY:Int = 3;
+		var expectedZ:Int = -5;
+		var row:Int = -5;
+		var column:Int = -1;
+		
+		// WHEN:
+		var coordinates:Coordinate = Coordinate.fromOffset(column, row, HexagonOrientation.Horizontal);
+		
+		// THEN:
+		assertThat(coordinates.x, equalTo(expectedX));
+		assertThat(coordinates.y, equalTo(expectedY));
+		assertThat(coordinates.z, equalTo(expectedZ));
+		assertTrue(true);
+	}
+	
+	public function testConstructorOffsetVertical() {
+		// GIVEN:
+		var expectedX:Int = 2;
+		var expectedY:Int = 3;
+		var expectedZ:Int = -5;
+		var row:Int = -5;
+		var column:Int = -1;
+		
+		// WHEN:
+		var coordinates:Coordinate = Coordinate.fromOffset(column, row, HexagonOrientation.Vertical);
+		
+		// THEN:
+		assertThat(coordinates.x, equalTo(expectedX));
+		assertThat(coordinates.y, equalTo(expectedY));
+		assertThat(coordinates.z, equalTo(expectedZ));
+		assertTrue(true);
+	}
+	
 	public function testAdd() {
 		// GIVEN:
 		var c1:Coordinate = new Coordinate(1, 2, -3);

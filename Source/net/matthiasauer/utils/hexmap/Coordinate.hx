@@ -15,15 +15,22 @@ class Coordinate
 		new Coordinate(-1, 1,  0), new Coordinate(-1,  0, 1), new Coordinate( 0, -1, 1)
 	];
 	
-	public function new(x:Int, y:Int, z:Int) 
-	{
+	public function new(x:Int, y:Int, z:Int) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 	
-    public function hashCode():Int
-    {
+	public static function fromOffset(column:Int, row:Int, orientation:HexagonOrientation) : Coordinate {
+		var cubeCoordinates:Array<Int> = CoordinateConverter.offsetToCube(column, row, orientation);
+		var x:Int = cubeCoordinates[0];
+		var y:Int = cubeCoordinates[1];
+		var z:Int = cubeCoordinates[2];
+		
+		return new Coordinate(x, y, z);
+	}
+	
+    public function hashCode() : Int {
 		// use XOR to create a hashcode from three integers
         return this.x ^ this.y ^ this.z;
     }
