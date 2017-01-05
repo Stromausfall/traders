@@ -1,4 +1,4 @@
-package net.matthiasauer.utils.hexmap;
+package net.matthiasauer.traders.utils.hexmap;
 
 enum HexagonOrientation 
 {

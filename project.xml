@@ -11,6 +11,9 @@
 	<assets path="Assets" rename="assets" />
 	
 	<haxelib name="openfl" />
+	
+	<!-- enforce always using the haxe implementation of the JSON api (not any native substitute) -->
+	<haxeflag name="-D haxeJSON" />
 
 	<!-- if the 'testing' define is not used -->
 	<app main="Main" path="Export" file="Traders" unless="testing"/>
