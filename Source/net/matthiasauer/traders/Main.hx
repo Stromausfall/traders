@@ -1,4 +1,4 @@
-package;
+package net.matthiasauer.traders;
 
 
 import openfl.display.Sprite;

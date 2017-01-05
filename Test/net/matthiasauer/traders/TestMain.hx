@@ -1,6 +1,6 @@
-package;
+package net.matthiasauer.traders;
+
 import haxe.unit.TestRunner;
-import net.matthiasauer.traders.model.map.TerrainTest;
 import net.matthiasauer.traders.persistence.DeserializationTest;
 import net.matthiasauer.traders.utils.hexmap.CoordinateConverterTest;
 import net.matthiasauer.traders.utils.hexmap.CoordinateTest;
@@ -12,11 +12,7 @@ class TestMain {
 		
 		////// persistence
 		testRunner.add(new DeserializationTest());
-		
-		////// model
-		//// data
-		testRunner.add(new TerrainTest());
-		
+				
 		////// utils		
 		// hexmap
 		testRunner.add(new CoordinateConverterTest());

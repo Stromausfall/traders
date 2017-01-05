@@ -1,22 +1,18 @@
 {
-	"terrain": [
-		{
-			"column": 0,
-			"row": -1,
-			"orientation": "Vertical",
-			"type": "Grassland"
-		},
-		{
-			"column": 0,
-			"row": 0,
-			"orientation": "Horizontal",
-			"type": "Grassland"
-		},
-		{
-			"column": 0,
-			"row": 1,
-			"orientation": "Vertical",
-			"type": "Grassland"
-		}
-	]
+	"name":"testName",
+	"map": {
+		"orientation": "Horizontal",
+		"terrain": [
+			{
+				"column": 0,
+				"row": -1,
+				"type": "Grassland"
+			},
+			{
+				"column": 0,
+				"row": 0,
+				"type": "Grassland"
+			}
+		]
+	}
 }

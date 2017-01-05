@@ -16,10 +16,10 @@
 	<haxeflag name="-D haxeJSON" />
 
 	<!-- if the 'testing' define is not used -->
-	<app main="Main" path="Export" file="Traders" unless="testing"/>
+	<app main="net.matthiasauer.traders.Main" path="Export" file="Traders" unless="testing"/>
 	
 	<!-- if the 'testing' define is used -->
-	<app main="TestMain" path="Export" file="Traders" if="testing"/>
+	<app main="net.matthiasauer.traders.TestMain" path="Export" file="Traders" if="testing"/>
 	<source path="Test" if="testing"/>
 	<haxelib name="mockatoo" if="testing"/>
 	<haxelib name="hamcrest" if="testing"/>
