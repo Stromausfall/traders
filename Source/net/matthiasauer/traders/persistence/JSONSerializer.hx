@@ -1,5 +1,6 @@
 package net.matthiasauer.traders.persistence;
 import haxe.Json;
+import net.matthiasauer.traders.persistence.data.GameData;
 
 /**
  * ...
@@ -14,13 +15,13 @@ class JSONSerializer implements ISerializer
 		this.dataAccess = dataAccess;
 	}
 	
-	public function deserialize(assetId:String) : MapData
+	public function deserialize(assetId:String) : GameData
 	{
 		// first retireve the data
 		var serializedData:String = this.dataAccess.getString(assetId);
 		
 		// then deserialize it
-		var deserializedData:MapData = Json.parse(serializedData);
+		var deserializedData:GameData = Json.parse(serializedData);
 		
 		return deserializedData;
 	}
