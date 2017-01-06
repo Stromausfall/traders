@@ -2,9 +2,10 @@ package net.matthiasauer.traders;
 
 import haxe.unit.TestRunner;
 import net.matthiasauer.traders.persistence.DeserializationTest;
-import net.matthiasauer.traders.persistence.map.MapDeserializationTest;
+import net.matthiasauer.traders.persistence.world.WorldDeserializationTest;
 import net.matthiasauer.traders.utils.hexmap.CoordinateConverterTest;
 import net.matthiasauer.traders.utils.hexmap.CoordinateTest;
+import net.matthiasauer.traders.model.world.WorldTest;
 
 
 class TestMain {
@@ -13,9 +14,13 @@ class TestMain {
 		
 		////// persistence
 		testRunner.add(new DeserializationTest());
-		//map
-		testRunner.add(new MapDeserializationTest());
-				
+		// map
+		testRunner.add(new WorldDeserializationTest());
+		
+		////// model
+		// world
+		testRunner.add(new WorldTest());
+		
 		////// utils		
 		// hexmap
 		testRunner.add(new CoordinateConverterTest());

@@ -1,6 +1,6 @@
 package net.matthiasauer.traders.persistence.data;
 
-typedef MapData =
+typedef WorldData =
 {
 	var orientation:String;
 	var terrain:Array<TerrainElementData>;

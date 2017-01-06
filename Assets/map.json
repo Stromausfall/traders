@@ -1,6 +1,6 @@
 {
 	"name":"testName",
-	"map": {
+	"world": {
 		"orientation": "Horizontal",
 		"terrain": [
 			{
