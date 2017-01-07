@@ -1,6 +1,8 @@
 package net.matthiasauer.traders.model.world.terrain;
+
 import net.matthiasauer.traders.persistence.data.TerrainElementData;
 import net.matthiasauer.traders.utils.hexmap.Coordinate;
+import net.matthiasauer.traders.utils.hexmap.CoordinateMap;
 import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
 
 /**
@@ -9,19 +11,29 @@ import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
  */
 class Terrain 
 {
+	private var map:CoordinateMap<TerrainType>;
 
 	public function new(terrainData:Array<TerrainElementData>, orientation:HexagonOrientation) 
 	{
+		this.map = new CoordinateMap<TerrainType>();
 		
+		this.initialize(terrainData, orientation);
+	}
+	
+	private function initialize(terrainData:Array<TerrainElementData>, orientation:HexagonOrientation) : Void {
+		for (element in terrainData) {
+			var coordinates:Coordinate = Coordinate.fromOffset(element.column, element.row, orientation);
+			var terrainType:TerrainType = TerrainType.createByName(element.type);
+			
+			this.map.set(coordinates, terrainType);
+		}
 	}
 	
 	public function get(coordinate:Coordinate) : TerrainType {
-		return TerrainType.Mountain;
+		return this.map.get(coordinate);
 	}
 	
-	/*
-	WAIT the hash for coordinates must be better and unique - only use x and y of the coordinates (as z is a composite of both).....
-	
-	--> alternative a multi hierarchical hash map -->  first x  then y (then z)   -->   map[x][y][z] 
-	--> create the multi hierarchical coordinate hashmap !*/
+	public function entries() : Array<CoordinateMapPair<TerrainType>> {
+		return this.map.entries();
+	}
 }

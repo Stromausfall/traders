@@ -22,7 +22,7 @@ class TestMain {
 		////// model
 		// world
 		testRunner.add(new WorldTest());
-		//testRunner.add(new TerrainTest());
+		testRunner.add(new TerrainTest());
 		
 		////// utils		
 		// hexmap
