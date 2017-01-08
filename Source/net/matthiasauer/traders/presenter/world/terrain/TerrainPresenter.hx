@@ -6,10 +6,6 @@ import net.matthiasauer.utils.general.Pair;
 import net.matthiasauer.utils.hexmap.Coordinate;
 import net.matthiasauer.utils.hexmap.IOffsetCoordnate;
 
-/**
- * ...
- * @author 
- */
 class TerrainPresenter 
 {
 	private var terrain:ITerrain;
