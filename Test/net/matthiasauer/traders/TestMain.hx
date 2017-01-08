@@ -4,7 +4,9 @@ import haxe.unit.TestRunner;
 import net.matthiasauer.traders.model.world.terrain.TerrainTest;
 import net.matthiasauer.traders.persistence.DeserializationTest;
 import net.matthiasauer.traders.persistence.world.WorldDeserializationTest;
+import net.matthiasauer.traders.presenter.world.terrain.TerrainPresenterTest;
 import net.matthiasauer.traders.model.world.WorldTest;
+import net.matthiasauer.utils.general.ArrayUtilsTest;
 import net.matthiasauer.utils.hexmap.CoordinateConverterTest;
 import net.matthiasauer.utils.hexmap.CoordinateMapTest;
 import net.matthiasauer.utils.hexmap.CoordinateTest;
@@ -15,6 +17,10 @@ import net.matthiasauer.utils.observer.SimpleObservableTest;
 class TestMain {
 	public static function main() {
 		var testRunner = new TestRunner();
+		
+		////// presenter
+		// world
+		testRunner.add(new TerrainPresenterTest());
 		
 		////// persistence
 		testRunner.add(new DeserializationTest());
@@ -36,7 +42,10 @@ class TestMain {
 		testRunner.add(new GenericObservableTest());
 		testRunner.add(new SimpleObservableTest());
 		
-		// run the tests
+		// general
+		testRunner.add(new ArrayUtilsTest());
+		
+		////// run the tests
 		testRunner.run();
 		
 		// close

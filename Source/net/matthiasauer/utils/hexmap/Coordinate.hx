@@ -5,7 +5,7 @@ import haxe.ds.HashMap;
 /**
  * for the explanation of the maths: http://www.redblobgames.com/grids/hexagons/
  */
-class Coordinate 
+class Coordinate implements ICubeCoordinate implements IOffsetCoordnate
 {
 	public var x(default, null) : Int;
 	public var y(default, null) : Int;

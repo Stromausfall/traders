@@ -3,7 +3,7 @@ package net.matthiasauer.utils.hexmap;
 import haxe.unit.TestCase;
 import mockatoo.Mockatoo;
 import net.matthiasauer.utils.hexmap.Coordinate;
-import net.matthiasauer.utils.hexmap.CoordinateMap.CoordinateMapPair;
+import net.matthiasauer.utils.general.Pair;
 import net.matthiasauer.utils.hexmap.HexagonOrientation;
 import org.hamcrest.Matchers;
 using mockatoo.Mockatoo;
@@ -57,7 +57,7 @@ class CoordinateMapTest extends TestCase
 		map.set(coord3, value3);
 		
 		// WHEN:
-		var entries:Array<CoordinateMapPair<String>> = map.entries();
+		var entries:Array<Pair<Coordinate, String>> = map.entries();
 		
 		// THEN:
 		assertEquals(3, entries.length);
@@ -75,7 +75,7 @@ class CoordinateMapTest extends TestCase
 		
 		// WHEN:
 		map.entries().pop();
-		var entries:Array<CoordinateMapPair<String>> = map.entries();
+		var entries:Array<Pair<Coordinate, String>> = map.entries();
 		
 		// THEN:
 		assertEquals(2, entries.length);

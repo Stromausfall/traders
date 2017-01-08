@@ -3,13 +3,14 @@ package net.matthiasauer.traders.model.world.terrain;
 import net.matthiasauer.traders.persistence.data.TerrainElementData;
 import net.matthiasauer.utils.hexmap.Coordinate;
 import net.matthiasauer.utils.hexmap.CoordinateMap;
+import net.matthiasauer.utils.general.Pair;
 import net.matthiasauer.utils.hexmap.HexagonOrientation;
 
 /**
  * ...
  * @author 
  */
-class Terrain 
+class Terrain implements ITerrain
 {
 	private var map:CoordinateMap<TerrainType>;
 
@@ -33,7 +34,7 @@ class Terrain
 		return this.map.get(coordinate);
 	}
 	
-	public function entries() : Array<CoordinateMapPair<TerrainType>> {
+	public function entries() : Array<Pair<Coordinate, TerrainType>> {
 		return this.map.entries();
 	}
 }

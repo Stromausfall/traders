@@ -1,39 +1,29 @@
 package net.matthiasauer.utils.hexmap;
 
 import haxe.ds.IntMap;
-
-class CoordinateMapPair<T>
-{
-	public var key(default, null) : Coordinate;
-	public var value(default, null) : T;
-	
-	public function new(key:Coordinate, value:T) {
-		this.key = key;
-		this.value = value;
-	}
-}
+import net.matthiasauer.utils.general.Pair;
 
 class CoordinateMap<T>
 {
-	private var xMap:IntMap<IntMap<CoordinateMapPair<T>>>;
-	private var entryArray:Array<CoordinateMapPair<T>>;
+	private var xMap:IntMap<IntMap<Pair<Coordinate, T>>>;
+	private var entryArray:Array<Pair<Coordinate, T>>;
 	
 	public function new() 
 	{
-		this.xMap = new IntMap<IntMap<CoordinateMapPair<T>>>();
-		this.entryArray = new Array<CoordinateMapPair<T>>();
+		this.xMap = new IntMap<IntMap<Pair<Coordinate, T>>>();
+		this.entryArray = new Array<Pair<Coordinate, T>>();
 	}
 	
 	public function get(coordinate:Coordinate) : T {
 		// use X
-		var yMap:IntMap<CoordinateMapPair<T>> = this.xMap.get(coordinate.x);
+		var yMap:IntMap<Pair<Coordinate, T>> = this.xMap.get(coordinate.x);
 		
 		if (yMap == null) {
 			// no entry for the X coordinate !
 			return null;
 		}
 		
-		var entry:CoordinateMapPair<T> = yMap.get(coordinate.y);
+		var entry:Pair<Coordinate, T> = yMap.get(coordinate.y);
 			
 		if (entry == null) {
 			// no entry for the Y coordinate !
@@ -45,23 +35,23 @@ class CoordinateMap<T>
 	
 	public function set(coordinate:Coordinate, value:T) : Void {
 		// use X
-		var yMap:IntMap<CoordinateMapPair<T>> = this.xMap.get(coordinate.x);
+		var yMap:IntMap<Pair<Coordinate, T>> = this.xMap.get(coordinate.x);
 		
 		if (yMap == null) {
 			// no entry for the X coordinate - create one
-			yMap = new IntMap<CoordinateMapPair<T>>();
+			yMap = new IntMap<Pair<Coordinate, T>>();
 			
 			// and store it
 			this.xMap.set(coordinate.x, yMap);
 		}
 		
-		var entry:CoordinateMapPair<T> = new CoordinateMapPair(coordinate, value);
+		var entry:Pair<Coordinate, T> = new Pair(coordinate, value);
 		
 		yMap.set(coordinate.y, entry);
 		this.entryArray.push(entry);
 	}
 	
-	public function entries() : Array<CoordinateMapPair<T>> {
+	public function entries() : Array<Pair<Coordinate, T>> {
 		// return a copy of the entries array
 		return this.entryArray.copy();
 	}
@@ -78,7 +68,7 @@ class CoordinateMap<T>
 	}
 	
 	private function removeEntryFromXMap(key:Coordinate) : Void {
-		var yMap:IntMap<CoordinateMapPair<T>> = this.xMap.get(key.x);
+		var yMap:IntMap<Pair<Coordinate, T>> = this.xMap.get(key.x);
 		
 		if (yMap == null) {
 			// no entry for the X coordinate !

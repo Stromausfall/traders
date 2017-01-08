@@ -4,8 +4,8 @@ import haxe.unit.TestCase;
 import mockatoo.Mockatoo;
 import net.matthiasauer.traders.persistence.data.TerrainElementData;
 import net.matthiasauer.traders.persistence.data.WorldData;
+import net.matthiasauer.utils.general.Pair;
 import net.matthiasauer.utils.hexmap.Coordinate;
-import net.matthiasauer.utils.hexmap.CoordinateMap.CoordinateMapPair;
 import net.matthiasauer.utils.hexmap.HexagonOrientation;
 import org.hamcrest.Matchers;
 using mockatoo.Mockatoo;
@@ -42,7 +42,7 @@ class TerrainTest extends TestCase
 		var terrain:Terrain = new Terrain(terrainData, orientation);
 
 		// WHEN:
-		var entries:Array<CoordinateMapPair<TerrainType>> = terrain.entries();
+		var entries:Array<Pair<Coordinate, TerrainType>> = terrain.entries();
 		
 		// THEN:
 		assertEquals(2, entries.length);
