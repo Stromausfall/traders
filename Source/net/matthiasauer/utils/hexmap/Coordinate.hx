@@ -1,4 +1,4 @@
-package net.matthiasauer.traders.utils.hexmap;
+package net.matthiasauer.utils.hexmap;
 import flash.display.InterpolationMethod;
 import haxe.ds.HashMap;
 

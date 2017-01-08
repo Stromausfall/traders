@@ -1,6 +1,6 @@
 package net.matthiasauer.traders.model.world;
 import net.matthiasauer.traders.persistence.data.WorldData;
-import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
+import net.matthiasauer.utils.hexmap.HexagonOrientation;
 
 class World 
 {

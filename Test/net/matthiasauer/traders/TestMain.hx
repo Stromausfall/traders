@@ -4,10 +4,12 @@ import haxe.unit.TestRunner;
 import net.matthiasauer.traders.model.world.terrain.TerrainTest;
 import net.matthiasauer.traders.persistence.DeserializationTest;
 import net.matthiasauer.traders.persistence.world.WorldDeserializationTest;
-import net.matthiasauer.traders.utils.hexmap.CoordinateConverterTest;
-import net.matthiasauer.traders.utils.hexmap.CoordinateMapTest;
-import net.matthiasauer.traders.utils.hexmap.CoordinateTest;
 import net.matthiasauer.traders.model.world.WorldTest;
+import net.matthiasauer.utils.hexmap.CoordinateConverterTest;
+import net.matthiasauer.utils.hexmap.CoordinateMapTest;
+import net.matthiasauer.utils.hexmap.CoordinateTest;
+import net.matthiasauer.utils.observer.GenericObservableTest;
+import net.matthiasauer.utils.observer.SimpleObservableTest;
 
 
 class TestMain {
@@ -29,6 +31,10 @@ class TestMain {
 		testRunner.add(new CoordinateConverterTest());
 		testRunner.add(new CoordinateTest());
 		testRunner.add(new CoordinateMapTest());
+		
+		// observer
+		testRunner.add(new GenericObservableTest());
+		testRunner.add(new SimpleObservableTest());
 		
 		// run the tests
 		testRunner.run();

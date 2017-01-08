@@ -1,7 +1,6 @@
-package net.matthiasauer.traders.utils.hexmap;
+package net.matthiasauer.utils.hexmap;
 
 import haxe.ds.IntMap;
-import net.matthiasauer.traders.utils.hexmap.CoordinateMap.CoordinateMapPair;
 
 class CoordinateMapPair<T>
 {

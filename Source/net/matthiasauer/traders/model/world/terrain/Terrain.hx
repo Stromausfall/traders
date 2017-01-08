@@ -1,9 +1,9 @@
 package net.matthiasauer.traders.model.world.terrain;
 
 import net.matthiasauer.traders.persistence.data.TerrainElementData;
-import net.matthiasauer.traders.utils.hexmap.Coordinate;
-import net.matthiasauer.traders.utils.hexmap.CoordinateMap;
-import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
+import net.matthiasauer.utils.hexmap.Coordinate;
+import net.matthiasauer.utils.hexmap.CoordinateMap;
+import net.matthiasauer.utils.hexmap.HexagonOrientation;
 
 /**
  * ...

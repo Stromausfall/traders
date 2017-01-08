@@ -1,4 +1,4 @@
-package net.matthiasauer.traders.utils.hexmap;
+package net.matthiasauer.utils.hexmap;
 
 /**
  * ...

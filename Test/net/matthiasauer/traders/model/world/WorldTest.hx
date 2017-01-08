@@ -3,7 +3,7 @@ package net.matthiasauer.traders.model.world;
 import haxe.unit.TestCase;
 import mockatoo.Mockatoo;
 import net.matthiasauer.traders.persistence.data.WorldData;
-import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
+import net.matthiasauer.utils.hexmap.HexagonOrientation;
 import org.hamcrest.Matchers;
 using mockatoo.Mockatoo;
 

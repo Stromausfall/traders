@@ -4,9 +4,9 @@ import haxe.unit.TestCase;
 import mockatoo.Mockatoo;
 import net.matthiasauer.traders.persistence.data.TerrainElementData;
 import net.matthiasauer.traders.persistence.data.WorldData;
-import net.matthiasauer.traders.utils.hexmap.Coordinate;
-import net.matthiasauer.traders.utils.hexmap.CoordinateMap.CoordinateMapPair;
-import net.matthiasauer.traders.utils.hexmap.HexagonOrientation;
+import net.matthiasauer.utils.hexmap.Coordinate;
+import net.matthiasauer.utils.hexmap.CoordinateMap.CoordinateMapPair;
+import net.matthiasauer.utils.hexmap.HexagonOrientation;
 import org.hamcrest.Matchers;
 using mockatoo.Mockatoo;
 
