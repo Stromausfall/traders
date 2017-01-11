@@ -13,7 +13,8 @@ class WorldTest extends TestCase
 		// GIVEN:
 		var worldData:WorldData = {
 			orientation:"Horizontal",
-			terrain:[]
+			terrain:[],
+			cities:[]
 		}
 		
 		// WHEN:

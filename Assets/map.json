@@ -33,6 +33,13 @@
 				"row": 1,
 				"type": "Grassland"
 			}
+		],
+		"cities": [
+			{
+				"column": 1,
+				"row": 1,
+				"name": "city#1"
+			}
 		]
 	}
 }
