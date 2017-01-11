@@ -13,8 +13,8 @@ import openfl.display.Sprite;
  */
 class TerrainView extends Sprite
 {
-	private static inline var TILE_SIZE_X = 50;
-	private static inline var TILE_SIZE_Y = 75;
+	private static inline var TILE_SIZE_X = 55;
+	private static inline var TILE_SIZE_Y = 55;
 	private var presenter:TerrainPresenter;
 	private var dataAccess:IDataAccess;
 	
@@ -28,7 +28,7 @@ class TerrainView extends Sprite
 	
 	private function createTile(x:Int, y:Int) : Sprite {
 		// create the SVG
-		var svg:SVG = new SVG(dataAccess.getString("circle.svg"));
+		var svg:SVG = new SVG(dataAccess.getString("grass.svg"));
 		var shape:Shape = new Shape();
 		var sprite:Sprite = new Sprite();
 		

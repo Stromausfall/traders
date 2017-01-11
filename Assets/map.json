@@ -1,7 +1,7 @@
 {
 	"name":"testName",
 	"world": {
-		"orientation": "Horizontal",
+		"orientation": "Vertical",
 		"terrain": [
 			{
 				"column": 0,
