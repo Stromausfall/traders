@@ -18,6 +18,7 @@
   <classpaths>
     <class path="C:\dev\tools\HaxeToolkit\haxe\lib\openfl\4,5,2" />
     <class path="C:\dev\tools\HaxeToolkit\haxe\lib\lime\3,5,2" />
+    <class path="C:\dev\tools\HaxeToolkit\haxe\lib\svg\1,1,1" />
     <class path="Source" />
     <class path="C:\dev\tools\HaxeToolkit\haxe\lib\openfl\4,5,2\externs\core\openfl" />
     <class path="C:\dev\tools\HaxeToolkit\haxe\lib\openfl\4,5,2\externs\extras" />
@@ -25,7 +26,7 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="openfl=4.5.2&#xA;lime=3.5.2&#xA;tools=3.5.2&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;openfl-native&#xA;lime-cffi&#xA;windows&#xA;desktop&#xA;haxeJSON&#xA;display" />
+    <option directives="openfl=4.5.2&#xA;lime=3.5.2&#xA;svg=1.1.1&#xA;tools=3.5.2&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;openfl-native&#xA;lime-cffi&#xA;windows&#xA;desktop&#xA;haxeJSON&#xA;display" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />

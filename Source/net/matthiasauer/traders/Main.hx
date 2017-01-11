@@ -33,7 +33,12 @@ class Main extends Sprite {
 		this.model = new Terrain(this.data.world.terrain, worldData.orientation);
 		this.presenter = new TerrainPresenter(this.model);
 		this.view = new TerrainView(this.presenter, dataAccess);
+		this.addChild(this.view);
 		
-		this.view.initialize();		
+		this.view.initialize();
+		
+		// for testing
+		this.view.x = 200;
+		this.view.y = 200;
 	}
 }

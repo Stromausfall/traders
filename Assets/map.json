@@ -12,6 +12,26 @@
 				"column": 0,
 				"row": 0,
 				"type": "Grassland"
+			},
+			{
+				"column": 0,
+				"row": 1,
+				"type": "Grassland"
+			},
+			{
+				"column": 1,
+				"row": -1,
+				"type": "Grassland"
+			},
+			{
+				"column": 1,
+				"row": 0,
+				"type": "Grassland"
+			},
+			{
+				"column": 1,
+				"row": 1,
+				"type": "Grassland"
 			}
 		]
 	}

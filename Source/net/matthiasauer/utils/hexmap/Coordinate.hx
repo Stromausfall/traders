@@ -12,8 +12,7 @@ class Coordinate implements ICubeCoordinate implements IOffsetCoordnate
 	public var z(default, null) : Int;
 	public var row(default, null) : Int;
 	public var column(default, null) : Int;
-	
-	private var orientation : HexagonOrientation;
+	public var orientation(default, null) : HexagonOrientation;
 	
 	private static var neighborOffset : Array<Coordinate> = [
 		new Coordinate(1, -1,  0, 0, 0, null), new Coordinate(1,  0, -1, 0, 0, null), new Coordinate( 0, 1, -1, 0, 0, null),
