@@ -16,12 +16,12 @@
 			{
 				"column": 0,
 				"row": 1,
-				"type": "Grassland"
+				"type": "Mountain"
 			},
 			{
 				"column": 1,
 				"row": -1,
-				"type": "Grassland"
+				"type": "Mountain"
 			},
 			{
 				"column": 1,
