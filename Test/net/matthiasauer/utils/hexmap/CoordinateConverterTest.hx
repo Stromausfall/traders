@@ -91,4 +91,36 @@ class CoordinateConverterTest extends TestCase
         assertThat(converted[1], equalTo(expectedOffset[1]));
 		assertTrue(true);
 	}
+	
+	public function testOffsetHorizontalToPixel() {
+		// GIVEN:
+		var row:Int = 7;
+		var column:Int = 1;
+		var orientation:HexagonOrientation = HexagonOrientation.Horizontal;
+		var tileSizeX:Int = 150;
+		var tileSizeY:Int = 125;
+		
+		// WHEN:
+		var pixelCoordinates:Array<Int> = CoordinateConverter.offsetToPixel(column, row, orientation, tileSizeX, tileSizeY);
+		
+		// THEN:
+		assertEquals(389, pixelCoordinates[0]);
+		assertEquals(1312, pixelCoordinates[1]);
+	}
+	
+	public function testOffsetVerticalToPixel() {
+		// GIVEN:
+		var row:Int = 7;
+		var column:Int = 1;
+		var orientation:HexagonOrientation = HexagonOrientation.Vertical;
+		var tileSizeX:Int = 150;
+		var tileSizeY:Int = 125;
+		
+		// WHEN:
+		var pixelCoordinates:Array<Int> = CoordinateConverter.offsetToPixel(column, row, orientation, tileSizeX, tileSizeY);
+		
+		// THEN:
+		assertEquals(225, pixelCoordinates[0]);
+		assertEquals(1623, pixelCoordinates[1]);
+	}
 }

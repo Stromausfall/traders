@@ -1,4 +1,5 @@
 package net.matthiasauer.utils.hexmap;
+import openfl.Lib;
 
 /**
  * ...
@@ -34,5 +35,24 @@ class CoordinateConverter
 		var row:Int = z;
 		
 		return [col, row];
+	}
+	
+	public static function offsetToPixel(column:Int, row:Int, orientation:HexagonOrientation, tileSizeX:Int, tileSizeY:Int) : Array<Int> {
+		var x:Float;
+		var y:Float;
+		
+		if (orientation == HexagonOrientation.Horizontal) {
+			x = Math.sqrt(3) * (column + 0.5 * (row & 1));
+			y = 3.0 / 2.0 * row;
+		} else {
+			x = 3.0 / 2.0 * column;
+			y = Math.sqrt(3) * (row + 0.5 * (column & 1));			
+		}
+		
+		// scale
+		x = x * tileSizeX;
+		y = y * tileSizeY;
+		
+		return [Std.int(x), Std.int(y)];
 	}
 }
