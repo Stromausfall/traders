@@ -4,7 +4,7 @@ import net.matthiasauer.traders.model.world.terrain.TerrainType;
 import net.matthiasauer.traders.persistence.IDataAccess;
 import net.matthiasauer.traders.presenter.world.terrain.TerrainPresenter;
 import net.matthiasauer.utils.hexmap.CoordinateConverter;
-import net.matthiasauer.utils.hexmap.IOffsetCoordnate;
+import net.matthiasauer.utils.hexmap.IOffsetCoordinate;
 import openfl.display.Shape;
 import openfl.display.Sprite;
 
@@ -34,7 +34,7 @@ class TerrainView extends Sprite
 		return svg;
 	}
 	
-	private function positionSprite(sprite:Sprite, coordinate:IOffsetCoordnate) : Void {	
+	private function positionSprite(sprite:Sprite, coordinate:IOffsetCoordinate) : Void {	
 		var pixelCoordinates:Array<Int> = CoordinateConverter.offsetToPixel(coordinate.column, coordinate.row, coordinate.orientation, TILE_SIZE_X, TILE_SIZE_Y);
 		var x:Int = pixelCoordinates[0];
 		var y:Int = pixelCoordinates[1];
@@ -58,7 +58,7 @@ class TerrainView extends Sprite
 		return sprite;
 	}
 	
-	private function createAndPosititon(coordinate:IOffsetCoordnate, fileName:String) : Sprite {
+	private function createAndPosititon(coordinate:IOffsetCoordinate, fileName:String) : Sprite {
 		var svg:SVG = this.createSVG(fileName);
 		var sprite:Sprite = this.createSprite(svg);		
 		
@@ -67,7 +67,7 @@ class TerrainView extends Sprite
 		return sprite;
 	}
 	
-	private function createTile(coordinate:IOffsetCoordnate, terrainType:TerrainType) : Sprite {
+	private function createTile(coordinate:IOffsetCoordinate, terrainType:TerrainType) : Sprite {
 		var fileName:String = terrainType.getName() + ".svg";
 		
 		return this.createAndPosititon(coordinate, fileName);

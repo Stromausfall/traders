@@ -4,7 +4,7 @@ import net.matthiasauer.traders.model.world.terrain.TerrainType;
 import net.matthiasauer.utils.general.ArrayUtils;
 import net.matthiasauer.utils.general.Pair;
 import net.matthiasauer.utils.hexmap.Coordinate;
-import net.matthiasauer.utils.hexmap.IOffsetCoordnate;
+import net.matthiasauer.utils.hexmap.IOffsetCoordinate;
 
 class TerrainPresenter 
 {
@@ -15,11 +15,11 @@ class TerrainPresenter
 		this.terrain = terrain;
 	}
 
-	public function entries() : Array<Pair<IOffsetCoordnate, TerrainType>> {
+	public function entries() : Array<Pair<IOffsetCoordinate, TerrainType>> {
 		return ArrayUtils.transform(terrain.entries(), this.transform);
 	}
 	
-	private function transform(input:Pair<Coordinate, TerrainType>) : Pair<IOffsetCoordnate, TerrainType> {
-		return new Pair<IOffsetCoordnate, TerrainType>(input.key, input.value);
+	private function transform(input:Pair<Coordinate, TerrainType>) : Pair<IOffsetCoordinate, TerrainType> {
+		return new Pair<IOffsetCoordinate, TerrainType>(input.key, input.value);
 	}
 }

@@ -1,9 +1,11 @@
 package net.matthiasauer.traders;
 
 import haxe.unit.TestRunner;
+import net.matthiasauer.traders.model.world.cities.CitiesTest;
 import net.matthiasauer.traders.model.world.terrain.TerrainTest;
 import net.matthiasauer.traders.persistence.DeserializationTest;
 import net.matthiasauer.traders.persistence.world.WorldDeserializationTest;
+import net.matthiasauer.traders.presenter.world.cities.CitiesPresenterTest;
 import net.matthiasauer.traders.presenter.world.terrain.TerrainPresenterTest;
 import net.matthiasauer.traders.model.world.WorldTest;
 import net.matthiasauer.utils.general.ArrayUtilsTest;
@@ -21,6 +23,7 @@ class TestMain {
 		////// presenter
 		// world
 		testRunner.add(new TerrainPresenterTest());
+		testRunner.add(new CitiesPresenterTest());
 		
 		////// persistence
 		testRunner.add(new DeserializationTest());
@@ -31,6 +34,7 @@ class TestMain {
 		// world
 		testRunner.add(new WorldTest());
 		testRunner.add(new TerrainTest());
+		testRunner.add(new CitiesTest());
 		
 		////// utils		
 		// hexmap
