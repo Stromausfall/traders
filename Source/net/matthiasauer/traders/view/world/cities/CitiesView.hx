@@ -1,8 +1,9 @@
-package net.matthiasauer.traders.view.world.terrain;
+package net.matthiasauer.traders.view.world.cities;
+
 import format.SVG;
-import net.matthiasauer.traders.model.world.terrain.TerrainType;
+import net.matthiasauer.traders.model.world.cities.ICity;
 import net.matthiasauer.traders.persistence.IDataAccess;
-import net.matthiasauer.traders.presenter.world.terrain.TerrainPresenter;
+import net.matthiasauer.traders.presenter.world.cities.CitiesPresenter;
 import net.matthiasauer.traders.view.world.WorldUtils;
 import net.matthiasauer.utils.hexmap.CoordinateConverter;
 import net.matthiasauer.utils.hexmap.IOffsetCoordinate;
@@ -13,12 +14,13 @@ import openfl.display.Sprite;
  * ...
  * @author 
  */
-class TerrainView extends Sprite
+class CitiesView extends Sprite
 {
-	private var presenter:TerrainPresenter;
+	private var presenter:CitiesPresenter;
+	private var dataAccess:IDataAccess;
 	private var worldUtils:WorldUtils;
 	
-	public function new(presenter:TerrainPresenter, dataAccess:IDataAccess) 
+	public function new(presenter:CitiesPresenter, dataAccess:IDataAccess) 
 	{
 		super();
 		
@@ -26,16 +28,15 @@ class TerrainView extends Sprite
 		this.worldUtils = new WorldUtils(dataAccess);
 	}
 	
-	private function createTile(coordinate:IOffsetCoordinate, terrainType:TerrainType) : Sprite {
-		var fileName:String = terrainType.getName() + ".svg";
+	private function createCity(coordinate:IOffsetCoordinate, city:ICity) : Sprite {
+		var fileName:String = "City.svg";
 		
 		return this.worldUtils.createAndPosititonSVG(coordinate, fileName);
 	}
 	
 	public function initialize() : Void {
 		for (element in this.presenter.entries()) {
-			
-			var sprite:Sprite = createTile(element.key, element.value);
+			var sprite:Sprite = createCity(element.key, element.value);
 			
 			this.addChild(sprite);
 		}

@@ -36,6 +36,16 @@
 		],
 		"cities": [
 			{
+				"column": 0,
+				"row": -1,
+				"name": "city#1"
+			},
+			{
+				"column": 0,
+				"row": 1,
+				"name": "city#1"
+			},
+			{
 				"column": 1,
 				"row": 1,
 				"name": "city#1"

@@ -10,15 +10,23 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="101.50835mm"
-   height="87.908806mm"
-   viewBox="0 0 101.50835 87.908806"
+   width="55.675339mm"
+   height="55.628357mm"
+   viewBox="0 0 55.675339 55.628357"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.0 r15299"
-   sodipodi:docname="Grassland.svg">
+   sodipodi:docname="City.svg">
   <defs
      id="defs2">
+    <linearGradient
+       id="linearGradient6491"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#de8787;stop-opacity:1;"
+         offset="0"
+         id="stop6489" />
+    </linearGradient>
     <linearGradient
        id="linearGradient6133"
        osb:paint="solid">
@@ -52,8 +60,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.88"
-     inkscape:cx="379.95846"
-     inkscape:cy="208.89925"
+     inkscape:cx="-202.85156"
+     inkscape:cy="16.619044"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -82,22 +90,23 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-3.9664688,-88.282335)">
+     transform="translate(-24.873759,-105.127)">
     <path
        sodipodi:type="star"
-       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       id="path4491"
-       sodipodi:sides="6"
-       sodipodi:cx="54.720642"
-       sodipodi:cy="132.23674"
-       sodipodi:r1="50.754173"
-       sodipodi:r2="43.954403"
-       sodipodi:arg1="-1.0471976"
-       sodipodi:arg2="-0.52359878"
+       id="path14"
+       sodipodi:sides="5"
+       sodipodi:cx="54.119316"
+       sodipodi:cy="131.48509"
+       sodipodi:r1="27.295818"
+       sodipodi:r2="13.647909"
+       sodipodi:arg1="0.46857368"
+       sodipodi:arg2="1.0968922"
        inkscape:flatsided="true"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       d="m 80.097727,88.282335 25.377093,43.954405 -25.377089,43.9544 -50.754173,0 L 3.9664688,132.23674 29.343553,88.282338 Z"
-       inkscape:transform-center-y="-1.6659747e-006" />
+       d="m 78.473009,143.81227 -28.551831,14.64387 -22.750147,-22.6292 14.491467,-28.62949 31.706366,4.93521 z"
+       inkscape:transform-center-x="1.2972964"
+       inkscape:transform-center-y="1.3417026"
+       style="fill:#000000;fill-opacity:0.23383084;stroke:#000000;stroke-width:3.7650001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>

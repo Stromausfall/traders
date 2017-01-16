@@ -9,7 +9,7 @@ import net.matthiasauer.traders.persistence.data.CitiesElementData;
  * ...
  * @author ...
  */
-class Cities 
+class Cities implements ICities
 {
 	private var map:CoordinateMap<City>;
 
