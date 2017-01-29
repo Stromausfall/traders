@@ -1,4 +1,4 @@
-package net.matthiasauer.traders.view.world;
+package net.matthiasauer.traders.view;
 import format.SVG;
 import net.matthiasauer.traders.persistence.IDataAccess;
 import net.matthiasauer.utils.hexmap.CoordinateConverter;
@@ -10,7 +10,7 @@ import openfl.display.Sprite;
  * ...
  * @author 
  */
-class WorldUtils 
+class SVGUtils 
 {
 	private static inline var TILE_SIZE_X = 55;
 	private static inline var TILE_SIZE_Y = 55;

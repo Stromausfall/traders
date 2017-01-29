@@ -7,7 +7,7 @@ import net.matthiasauer.utils.hexmap.Coordinate;
  */
 interface ITerrain 
 {
-	function get(coordinate:Coordinate) : TerrainType;
+	function get(coordinate:Coordinate) : TerrainTile;
 	
-	function entries() : Array<Pair<Coordinate, TerrainType>>;
+	function entries() : Array<Pair<Coordinate, TerrainTile>>;
 }
